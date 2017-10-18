@@ -23,6 +23,5 @@ def mouseclick(event):
         Sprite(greenbackground)
     elif num == 3:
         Sprite(bluebackground)
-    App().listenMouseEvent('click', mouseclick)
-    App().run()
-    
+App().listenMouseEvent('click', mouseclick)
+App().run()
