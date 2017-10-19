@@ -49,7 +49,7 @@ def updatescore():
 
 if __name__ == '__main__':
     
-    data = []
+    data = {}
     data['score'] = 0
     
     green = Color(0x006600,1)
