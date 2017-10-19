@@ -14,26 +14,41 @@ def moveright(event):
         monkey.x += CELL_SIZE
         if monkey.x == banana.x and monkey.y == banana.y:
             movebanana()
+            updatescore()
+            
 def moveleft(event):
     if monkey.x > 0:
         monkey.x -= CELL_SIZE
         if monkey.x == banana.x and monkey.y == banana.y:
             movebanana()
+            updatescore()
+            
 def moveup(event):
     if monkey.y > 0:
         monkey.y -= CELL_SIZE
         if monkey.x == banana.x and monkey.y == banana.y:
             movebanana()
+            updatescore()
+            
 def movedown(event):
     if monkey.y < (ROWS-1)*CELL_SIZE:
         monkey.y += CELL_SIZE
         if monkey.x == banana.x and monkey.y == banana.y:
             movebanana()
+            updatescore()
+            
 def movebanana():
     banana.x = randint(0,COLS-1)*CELL_SIZE
     banana.y = randint(0,ROWS-1)*CELL_SIZE
-    
+
+def updatescore():
+    data{'score'} += 10
+    print(data['score'])
+
 if __name__ == '__main__':
+    
+    data = {}
+    data{'score'} = 0
     
     green = Color(0x006600,1)
     brown = Color(0x8B4513,1)
