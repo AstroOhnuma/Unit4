@@ -14,13 +14,16 @@ def moveright(event):
         monkey.x += CELL_SIZE
     
 def moveleft(event):
-    monkey.x -= CELL_SIZE
+    if monkey.x > 0:
+        monkey.x -= CELL_SIZE
     
 def moveup(event):
-    monkey.y -= CELL_SIZE
+    if monkey.y > 0:
+        monkey.y -= CELL_SIZE
     
 def movedown(event):
-    monkey.y += CELL_SIZE
+    if monkey.y < (ROWS-1)*CELL_SIZE:
+        monkey.y += CELL_SIZE
     
 if __name__ == '__main__':
     
