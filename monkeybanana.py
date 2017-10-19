@@ -9,6 +9,9 @@ ROWS = 20
 COLS = 40
 CELL_SIZE = 20
 
+def moveright(event):
+    monkey.x += CELL_SIZE
+
 if __name__ == '__main__':
     
     green = Color(0x006600,1)
