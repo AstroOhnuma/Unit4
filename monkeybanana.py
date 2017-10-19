@@ -36,7 +36,7 @@ if __name__ == '__main__':
     bananabox = RectangleAsset(CELL_SIZE,CELL_SIZE,LineStyle(1,yellow),yellow)
     
     Sprite(junglebox)
-    Sprite(bananabox,(COLS*CELL_SIZE/2,ROWS*CELL_SIZE/2))
+    banana = Sprite(bananabox,(COLS*CELL_SIZE/2,ROWS*CELL_SIZE/2))
     monkey = Sprite(monkeybox)
     
     App().listenKeyEvent('keydown','right arrow', moveright)
@@ -44,3 +44,4 @@ if __name__ == '__main__':
     App().listenKeyEvent('keydown','up arrow', moveup)
     App().listenKeyEvent('keydown','down arrow', movedown)
     App().run()
+    
