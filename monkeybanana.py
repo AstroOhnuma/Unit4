@@ -3,7 +3,7 @@
 #monkeybanana.py - best game ever
 
 from ggame import *
-
+from random import randint
 
 ROWS = 20
 COLS = 40
@@ -24,6 +24,10 @@ def moveup(event):
 def movedown(event):
     if monkey.y < (ROWS-1)*CELL_SIZE:
         monkey.y += CELL_SIZE
+        
+def movebanana():
+    banana.x = randint(0,COLS-1)*CELL_SIZE
+    banana.y = randint(0,ROWS-1)*CELL_SIZE
     
 if __name__ == '__main__':
     
