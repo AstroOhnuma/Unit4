@@ -47,10 +47,16 @@ def updatescore():
     scorebox = TextAsset('Score = '+str(data['score']))
     data['scoretext'] = Sprite(scorebox,(0,ROWS*CELL_SIZE))
 
+def step():
+    datat['frames'] += 1
+    if data['frames'] == 300:
+        movebanana()
+
 if __name__ == '__main__':
     
     data = {}
     data['score'] = 0
+    data['frames'] = 0
     
     green = Color(0x006600,1)
     brown = Color(0x8B4513,1)
@@ -70,5 +76,5 @@ if __name__ == '__main__':
     App().listenKeyEvent('keydown','left arrow', moveleft)
     App().listenKeyEvent('keydown','up arrow', moveup)
     App().listenKeyEvent('keydown','down arrow', movedown)
-    App().run()
+    App().run(step)
     
