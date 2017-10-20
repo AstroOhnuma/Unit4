@@ -51,7 +51,7 @@ def updatescore():
     data['scoretext'] = Sprite(scorebox,(0,ROWS*CELL_SIZE))
 #keeps track of how many frames have passed
 def step():
-    datat['frames'] += 1
+    data['frames'] += 1
     if data['frames'] == 300:
         movebanana()
 #runs the game
