@@ -52,7 +52,7 @@ def updatescore():
 #keeps track of how many frames have passed
 def step():
     data['frames'] += 1
-    if data['frames'] == 300:
+    if data['frames'] == 30:
         movebanana()
 #runs the game
 if __name__ == '__main__':
