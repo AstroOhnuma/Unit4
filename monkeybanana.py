@@ -5,54 +5,56 @@
 from ggame import *
 from random import randint
 
+#constants
 ROWS = 20
 COLS = 40
 CELL_SIZE = 20
 
+#moves the monkey right
 def moveright(event):
     if monkey.x < (COLS-1)*CELL_SIZE:
         monkey.x += CELL_SIZE
         if monkey.x == banana.x and monkey.y == banana.y:
             movebanana()
             updatescore()
-            
+#moves the monkey left            
 def moveleft(event):
     if monkey.x > 0:
         monkey.x -= CELL_SIZE
         if monkey.x == banana.x and monkey.y == banana.y:
             movebanana()
             updatescore()
-            
+#moves the monkey up
 def moveup(event):
     if monkey.y > 0:
         monkey.y -= CELL_SIZE
         if monkey.x == banana.x and monkey.y == banana.y:
             movebanana()
             updatescore()
-            
+#moves monkey down 
 def movedown(event):
     if monkey.y < (ROWS-1)*CELL_SIZE:
         monkey.y += CELL_SIZE
         if monkey.x == banana.x and monkey.y == banana.y:
             movebanana()
             updatescore()
-            
+#moves banana to random location
 def movebanana():
     banana.x = randint(0,COLS-1)*CELL_SIZE
     banana.y = randint(0,ROWS-1)*CELL_SIZE
     data['frames'] = 0
-    
+#updates score when monkey gets banana
 def updatescore():
     data['score'] += 10
     data['scoretext'].destroy()
     scorebox = TextAsset('Score = '+str(data['score']))
     data['scoretext'] = Sprite(scorebox,(0,ROWS*CELL_SIZE))
-
+#keeps track of how many frames have passed
 def step():
     datat['frames'] += 1
     if data['frames'] == 300:
         movebanana()
-
+#runs the game
 if __name__ == '__main__':
     
     data = {}
