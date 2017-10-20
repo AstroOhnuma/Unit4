@@ -50,7 +50,7 @@ def updatescore():
 
 def step():
     datat['frames'] += 1
-    if data['frames'] == 300:
+    if data['frames'] == 30:
         movebanana()
 
 if __name__ == '__main__':
