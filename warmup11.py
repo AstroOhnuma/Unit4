@@ -3,10 +3,13 @@
 #warmup11.py - determine if a number is prime and print True or False
 
 def isprime(x):
-    if x%2== 0:
-        print(False)
+    i = 1
+    while i < x:
+        i += 1
+    if x%i==0:
+        return False
     else:
-        print(True)
+        return True
     
 
-isprime(4)
+print(isprime(7))
