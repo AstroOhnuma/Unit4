@@ -4,7 +4,9 @@
 
 def f():
     x = 77
+    y = 10
 
 x = 5
 f()
 print(x)
+print(y)
