@@ -5,6 +5,8 @@
 def isprime(x):
     if x%2== 0:
         print(False)
-    return True/False
+    else:
+        print(True)
+    
 
 isprime(4)
