@@ -3,7 +3,15 @@
 #programlist2functions.py - the functions for program list 2
 
 #8 - taking two strings as arguments and returns a string that contains all the letters that appear in at least one of the words
+from random import randint
 
-def stringunion():
-    
+def stringunion(str1,str2):
+    answer = ''
+    for ch in str1:
+        print(answer+ch)
+    for ch in str2:
+        print(answer+ch)
+    print(answer)
+stringunion('word','other')
+
 
