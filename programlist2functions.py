@@ -8,12 +8,12 @@ from random import randint
 def stringunion(str1,str2):
     answer = ''
     for ch in str1:
-        if ch >= ch:
-            print('no')
-        answer += ch
+        if not ch in answer:
+            answer += ch
     for ch in str2:
-        answer += ch
+        if not ch in answer:
+            answer += ch
     print(answer)
-stringunion('word','other')
+stringunion('Mississipi','Pensylvania')
 
 
