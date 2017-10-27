@@ -18,10 +18,7 @@ stringunion('Mississipi','Pensylvania')
 #9 - taking two strings as arguments and returns a string that contains all the letters that are in both the first and second word
 def stringintersect(str1,str2):
     answer = ''
-    for ch in str1:
-        if ch in answer:
-            answer += ch
-    for ch in str2:
+    for ch in str1 and str2:
         if ch in answer:
             answer += ch
     print(answer)
